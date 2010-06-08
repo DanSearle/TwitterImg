@@ -1,0 +1,8 @@
+TwitterImg
+
+A simple perl script designed to run on a webserver to generate a image of your most recent tweet from twitter.
+
+You will need to edit the ``$atomFeed'' variable near the top of the file to the location of your twitter atom feed.
+
+You will also need to modify the location of the ``$cacheImg'' to a valid location for the webserver to save the cache
+file to. 
