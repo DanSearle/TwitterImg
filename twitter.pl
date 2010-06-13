@@ -47,7 +47,7 @@ my $dateDelta = 1; # 1 Day
 # Librarys to use
 use strict;
 use CGI qw/:standard/;
-use LWP;
+use LWP::Simple;
 use GD;
 use File::stat;
 use Date::Calc qw(Delta_DHMS);
