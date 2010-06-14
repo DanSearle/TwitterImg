@@ -207,9 +207,9 @@ sub genImg() {
     my $rest = $tweetcontent;
     my @text = ();
     while($rest ne '') {
-      $rest =~ /(.{1,$linelen}\W)/ms;
+      $rest =~ /(.{1,$linelen}\W)(.*)/ms;
       push @text, $1;
-      $rest = $';
+      $rest = $2;
     }
 
     # Add the split text to the image
@@ -219,6 +219,7 @@ sub genImg() {
       $y += 10;
     }
   }
+
   # Save the gif image to the cache file
   open(IMG,">$cacheImg") or die $!;
   binmode IMG;
